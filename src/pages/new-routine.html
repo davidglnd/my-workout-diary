@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="../css/components/buttons.css">
     <link rel="stylesheet" href="../css/components/routine-cards.css">
     <link rel="stylesheet" href="../css/components/logged-header.css">
+    <script src="../js/pages/new-routine.js"></script>
     <title>My Workout Diary</title>
 </head>
 <body>
@@ -32,7 +33,7 @@
     </header>
     
     <main>
-        <form action="">
+        <form id="routine-details" class="form-step">
             <h2>Nueva rutina</h2>
             <label for="type-routine">Disciplina de la rutina</label>
             <input type="text" name="type-routine" id="type-routine">
@@ -42,7 +43,28 @@
             <input type="number" name="days" id="workout-days" min="2" max="7">
             <label for="rest-days">Numero de dias de descanso</label>
             <input type="number" name="days" id="rest-days" min="0" max="5">
-            <button type="submit" class="btn-primary-form">Siguiente</button>
+            <button type="button" class="btn-primary-form" id="next-step">Siguiente</button>
+        </form>
+        <form id="routine-extras" class="form-step active">
+            <h2>Nueva rutina</h2>
+            <!-- Aqui va primero un div que seleccionas que dias vas a entrenar (por ejemplo lunes miercoles y viernes) luego los dias de descanso-->
+             <div class="days-selector">
+                <h3>Dias de entrenamiento</h3>
+                <input type="checkbox" name="workout-days" id="workout-monday"value="monday">
+                <label for="workout-monday">Lunes</label>
+                <input type="checkbox" name="workout-days" id="workout-tuesday"value="tuesday">
+                <label for="workout-tuesday">Martes</label>
+                <input type="checkbox" name="workout-days" id="workout-wednesday"value="wednesday">
+                <label for="workout-wednesday">Miercoles</label>
+                <input type="checkbox" name="workout-days" id="workout-thursday"value="thursday">
+                <label for="workout-thursday">Jueves</label>
+                <input type="checkbox" name="workout-days" id="workout-friday"value="friday">
+                <label for="workout-friday">Viernes</label>
+                <input type="checkbox" name="workout-days" id="workout-saturday"value="saturday">
+                <label for="workout-saturday">Sabado</label>
+                <input type="checkbox" name="workout-days" id="workout-sunday"value="sunday">
+                <label for="workout-sunday">Domingo</label>
+             </div>
         </form>
     </main>
 </body>
