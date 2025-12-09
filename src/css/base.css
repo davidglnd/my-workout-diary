@@ -5,6 +5,13 @@ body {
     padding: 20px;
 }
 
+main{
+    background: #1a1f2e;
+    padding: 20px;
+    border-radius: 16px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    transition: all 0.3s;
+}
 .container {
     max-width: 1200px;
     margin: 0 auto;
@@ -29,4 +36,8 @@ h1 {
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
+}
+
+h2{
+    color:#00ff88;
 }

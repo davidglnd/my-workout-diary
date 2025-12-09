@@ -31,3 +31,29 @@
     transform: translateY(-2px);
     box-shadow: 0 8px 20px rgb(77, 35, 150);
 }
+
+.btn-primary-form {
+    width: 90%;
+    background: linear-gradient(135deg, #00ff88, #00dd77);
+    color: #0a0e1a;
+    padding: 16px 24px;
+    border: none;
+    border-radius: 10px;
+    font-weight: bold;
+    font-size: 16px;
+    cursor: pointer;
+    margin: 20px auto;
+    transition: all 0.3s;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.btn-primary-form:hover {
+    background: linear-gradient(135deg, #00dd77, #00cc66);
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px rgba(0, 255, 136, 0.3);
+}
+
+.btn-primary-form:active {
+    transform: translateY(0);
+}

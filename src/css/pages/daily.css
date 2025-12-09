@@ -1,19 +1,7 @@
-main{
-    background: #1a1f2e;
-    padding: 20px;
-    border-radius: 16px;
-    border: 1px solid rgba(255, 255, 255, 0.05);
-    transition: all 0.3s;
-}
-
 .workout-routine{
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
     gap: 20px;
-}
-
-h2{
-    color:#00ff88;
 }

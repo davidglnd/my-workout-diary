@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="../css/pages/new-routine.css">
+    <link rel="stylesheet" href="../css/components/buttons.css">
+    <link rel="stylesheet" href="../css/components/routine-cards.css">
+    <link rel="stylesheet" href="../css/components/logged-header.css">
+    <title>My Workout Diary</title>
+</head>
+<body>
+    <header>
+        <div>
+            <h1>💪 My Workout Diary</h1>
+
+            <nav>
+                <button class="btn-primary" href="/">Cerrar sesión</button>
+            </nav>
+        </div>
+        <div>
+            <p>Bienvenido Usuario</p>
+            <!-- En hola usuario haremos un script que diga buenos dias/tardes/noches segun la hora y el nombre de usuario -->
+            <nav class="profile-nav">
+                <button class="btn-secondary">Añadir rutina</button>
+                <button class="btn-secondary">Editar perfil</button>
+                <button class="btn-secondary">Nuevo entrenamiento</button>
+            </nav>
+        </div>
+
+    </header>
+    
+    <main>
+        <form action="">
+            <h2>Nueva rutina</h2>
+            <label for="type-routine">Disciplina de la rutina</label>
+            <input type="text" name="type-routine" id="type-routine">
+            <label for="description">Descripción de la rutina</label>
+            <input type="text" name="description" id="description">
+            <label for="workout-days">Numero de dias de actividad</label>
+            <input type="number" name="days" id="workout-days" min="2" max="7">
+            <label for="rest-days">Numero de dias de descanso</label>
+            <input type="number" name="days" id="rest-days" min="0" max="5">
+            <button type="submit" class="btn-primary-form">Siguiente</button>
+        </form>
+    </main>
+</body>
+</html>
