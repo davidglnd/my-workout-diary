@@ -1,0 +1,43 @@
+.routine-card{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    gap: 20px;
+    width: 100%;
+    height: auto;
+    border-radius: 16px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    transition: all 0.3s;
+}
+
+.routine-card:hover{
+    transform: translateY(-5px);
+    border-color: rgba(0, 255, 136, 0.3);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+.info-routine-card > h3{
+    color: #e5e7eb;
+    text-align: left;
+    margin: 10px 0 10px 30px;
+}
+
+.info-routine-card > p{
+    color: #9ca3af;
+    text-align: left;
+    margin: 10px 0 10px 30px;
+}
+.routine-card-days{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    width: 100%;
+    height: auto;
+    margin: 10px 30px 10px 30px;
+    border-radius: 16px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    transition: all 0.3s;
+}

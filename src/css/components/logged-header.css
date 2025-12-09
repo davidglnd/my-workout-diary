@@ -1,0 +1,10 @@
+/* Profile nav */
+.profile-nav {
+    margin-top: 15px;
+    display: flex;
+    justify-content: flex-end;
+    gap: 20px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
