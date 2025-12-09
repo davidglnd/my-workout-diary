@@ -69,9 +69,9 @@ textarea::placeholder {
 .form-step {
     position: relative;
     opacity: 0;
-    transform: translateX(100px); /* empieza desplazado */
+    transform: translateX(100px); 
     transition: all 0.5s ease;
-    pointer-events: none; /* para que no se pueda interactuar mientras está oculto */
+    pointer-events: none;
 }
 
 .form-step.active {
