@@ -33,16 +33,18 @@
 }
 
 .btn-primary-form {
-    width: 90%;
+    width: 70%;
     background: linear-gradient(135deg, #00ff88, #00dd77);
     color: #0a0e1a;
-    padding: 16px 24px;
+    padding: 16px 12px;
     border: none;
     border-radius: 10px;
     font-weight: bold;
     font-size: 16px;
     cursor: pointer;
-    margin: 20px auto;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    margin-left: 15%;
     transition: all 0.3s;
     text-transform: uppercase;
     letter-spacing: 0.5px;
