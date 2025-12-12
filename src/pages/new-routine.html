@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="../css/components/buttons.css">
     <link rel="stylesheet" href="../css/components/routine-cards.css">
     <link rel="stylesheet" href="../css/components/logged-header.css">
-    <script src="../js/pages/new-routine.js"></script>
+    <script type="module" src="../js/pages/new-routine.js"></script>
     <title>My Workout Diary</title>
 </head>
 <body>
@@ -39,17 +39,18 @@
             <div class="progress-dot" id="dot-2"></div>
         </div>
         <form id="routine-details" class="form-step active ">
-            <label for="type-routine">Disciplina de la rutina</label>
-            <input type="text" name="type-routine" id="type-routine">
+            <label for="name">Disciplina de la rutina</label>
+            <input type="text" name="name" id="name" placeholder="Ej: Musculación, Cardio, CrossFit..." required>
             <label for="description">Descripción de la rutina</label>
-            <input type="text" name="description" id="description">
+            <input type="text" name="description" id="description" placeholder="Describe tu rutina..." required>
             <label for="workout-days">Numero de dias de actividad</label>
-            <input type="number" name="days" id="workout-days" min="2" max="7">
+            <input type="number" name="workout_days" id="workout-days" min="2" max="7" placeholder="2-7" required>
             <label for="rest-days">Numero de dias de descanso</label>
-            <input type="number" name="days" id="rest-days" min="0" max="5">
+            <input type="number" name="rest_days" id="rest-days" min="0" max="5" placeholder="0-5" required>
+            <div class="error" id="error-msg"></div>
             <button type="button" class="btn-primary-form" id="next-step">Siguiente</button>
         </form>
-        <form id="routine-extras" class="form-step ">
+        <form id="routine-days" class="form-step ">
             <!-- trabajar esto en js-->
              <div class="days-selector">
                 <h3>Días de entrenamiento</h3>

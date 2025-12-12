@@ -116,8 +116,8 @@ input[type="number"]:focus {
 
 .error{
     color: #f87171;
-    margin-top: 12px;
-    margin-bottom: 12px;
+    margin-top: 15px;
+    margin-bottom: 15px;
     font-weight: 500;
     font-size: 16px;
     text-align: center;
