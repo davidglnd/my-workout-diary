@@ -13,7 +13,6 @@ function clickedButton() {
     const formDetailsObject = Object.fromEntries(formDetailsInputs);
 
     formDetailsObject.workout_days = Number(formDetailsObject.workout_days);
-    formDetailsObject.rest_days = Number(formDetailsObject.rest_days);
 
     let validateformDetailsObject = validateRoutineForm(formDetailsObject);
 
@@ -32,4 +31,11 @@ function clickedButton() {
 
 function nextStep(formDetailsObject){
     console.log(formDetailsObject);
+    const formDays = document.querySelector('#routine-days');
+    const formDetails = document.querySelector('#routine-details');
+
+    formDetails.classList.remove('active');
+    formDays.classList.add('active');
+
+    
 };
