@@ -15,7 +15,7 @@
     box-shadow: 0 8px 20px rgba(0, 255, 136, 0.3);
 }
 
-.btn-secondary {
+/* .btn-secondary {
     background: #7c3aed;
     color: #e5e7eb;
     padding: 6px 12px;
@@ -30,6 +30,28 @@
     background: #7436e0;
     transform: translateY(-2px);
     box-shadow: 0 8px 20px rgb(77, 35, 150);
+} */
+.btn-secondary {
+    background: transparent;
+    color: #e5e7eb;
+    padding: 6px 12px;
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+    font-weight: bold;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s;
+    text-decoration: none;
+    display: inline-block;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.btn-secondary:hover {
+    background: rgba(255, 255, 255, 0.05);
+    border-color: #7c3aed;
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px rgba(124, 58, 237, 0.2);
 }
 
 .btn-primary-form {
