@@ -1,0 +1,24 @@
+{
+  "name": "my-workout-diary",
+  "version": "1.0.0",
+  "description": "",
+  "homepage": "https://github.com/davidglnd/my-workout-diary#readme",
+  "bugs": {
+    "url": "https://github.com/davidglnd/my-workout-diary/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/davidglnd/my-workout-diary.git"
+  },
+  "license": "ISC",
+  "author": "",
+  "type": "module",
+  "main": "server/server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node --env-file=.env --watch server/server.js"
+  },
+  "dependencies": {
+    "express": "^5.2.1"
+  }
+}
