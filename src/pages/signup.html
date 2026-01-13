@@ -4,9 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/base.css">
-    <link rel="stylesheet" href="../css/pages/singin.css">
+    <link rel="stylesheet" href="../css/pages/signup.css">
     <link rel="stylesheet" href="../css/components/buttons.css">
     <link rel="stylesheet" href="../css/components/forms.css">
+    <script type="module" src="../js/pages/signup.js"></script>
     <title>My Workout Diary</title>
 </head>
 <body>
@@ -18,7 +19,7 @@
         </header>
         
         <main>
-            <form action="">
+            <form id="form-sign-up">
                 <h2>Registrarme</h2>
                 <label for="name">Nombre</label>
                 <input type="text" name="name" id="name" placeholder="Nombre" required>
@@ -32,7 +33,7 @@
                 <input type="email" name="email" id="email" placeholder="Correo" required>
                 <label for="password">Contraseña</label>
                 <input type="password" name="password" id="password" placeholder="Contraseña" required>
-                <button type="submit" class="btn-primary-form">Registrarme</button>
+                <button id="sign-up" class="btn-primary-form">Registrarme</button>
             </form>
         </main>
     </div>
