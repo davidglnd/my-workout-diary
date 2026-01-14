@@ -1,4 +1,4 @@
-
+//imports validateFunctions 
 import { validateRoutineDetailsForm, validateRoutineDaysForm } from '../validators/new-routine-form-validator.js';
 
 window.addEventListener('DOMContentLoaded', () => {

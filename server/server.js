@@ -3,11 +3,17 @@ import express from 'express';
 import path from 'path';
 //import connectToDB
 import { connectToDB } from './db.js';
+//import cors
+import cors from 'cors';
 
 import { fileURLToPath } from 'url';
 
 const app = express();
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 1337;
+
+//middlewares cors y json
+app.use(cors());
+app.use(express.json());
 
 // __dirname route
 const __filename = fileURLToPath(import.meta.url);
@@ -23,6 +29,13 @@ app.use(express.static(frontendPath));
 app.get('/', (req, res) => {
     res.sendFile(path.join(frontendPath, 'index.html'));
 });
+
+//endpoints routes
+app.post('/api/signup', (req, res) => {
+    console.log(req.body);
+    res.send('ok');
+});
+
 // Page 404
 app.use((req, res) => {
   res.status(404).sendFile('404.html', { root: frontendPath });
@@ -32,9 +45,4 @@ connectToDB();
 // start server
 app.listen(PORT, () => {
     console.log(`Server running on port ${PORT}`);
-});
-
-//endpoints routes
-app.post('/signup', (req, res) => {
-    console.log(req.body);
 });
