@@ -33,3 +33,8 @@ connectToDB();
 app.listen(PORT, () => {
     console.log(`Server running on port ${PORT}`);
 });
+
+//endpoints routes
+app.post('/signup', (req, res) => {
+    console.log(req.body);
+});
