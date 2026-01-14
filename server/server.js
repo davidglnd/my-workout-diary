@@ -1,6 +1,8 @@
 //import express 
 import express from 'express';
 import path from 'path';
+//import connectToDB
+import { connectToDB } from './db.js';
 
 import { fileURLToPath } from 'url';
 
@@ -25,6 +27,8 @@ app.get('/', (req, res) => {
 app.use((req, res) => {
   res.status(404).sendFile('404.html', { root: frontendPath });
 });
+// connect Mongo
+connectToDB();
 // start server
 app.listen(PORT, () => {
     console.log(`Server running on port ${PORT}`);
