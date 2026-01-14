@@ -11,9 +11,9 @@ function formSubmit(event) {
     const form = document.querySelector('#form-sign-up');
     const formData = new FormData(form);
     const formDataObject = Object.fromEntries(formData);
-    
+    console.log(formDataObject);
     let validateform = signUpFormValidator(formDataObject);
 
-    console.log(validateform);
+    console.log(validateform.boolean, validateform.text, validateform.code);
     
 }
