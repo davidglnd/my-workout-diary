@@ -15,22 +15,28 @@ function formSubmit(event) {
     const form = document.querySelector('#form-sign-up');
     const formData = new FormData(form);
     const formDataObject = Object.fromEntries(formData);
+    const errorBox = document.querySelector('#error-msg');
     
     let validateform = signUpFormValidator(formDataObject);
 
     console.log(validateform.boolean, validateform.text, validateform.code);
 
     if(validateform.boolean === true){
-        const error = document.querySelector('#error-msg');
-        error.textContent = validateform.text;
-        error.classList.add('active');
+        errorBox.textContent = validateform.text;
+        errorBox.classList.add('active');
         setTimeout(() => {
-            error.classList.remove('active');
+            errorBox.classList.remove('active');
         }, 3000)
     }else if(validateform.boolean === false){
         console.log(formDataObject);
         axios.post('/api/signup', formDataObject)
-        
+            .catch(error =>{
+                errorBox.textContent = error.response.data.message;
+                errorBox.classList.add('active');
+                setTimeout(() => {
+                    errorBox.classList.remove('active');
+                }, 3000)
+            });
     }
     
 }

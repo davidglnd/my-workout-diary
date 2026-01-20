@@ -5,6 +5,10 @@ import path from 'path';
 import { connectToDB } from './db.js';
 //import cors
 import cors from 'cors';
+// //import validators
+import { registerValidator } from './validators/register.validator.js';
+//import controllers
+import { register } from './controller/signup.controller.js';
 
 import { fileURLToPath } from 'url';
 
@@ -31,10 +35,7 @@ app.get('/', (req, res) => {
 });
 
 //endpoints routes
-app.post('/api/signup', (req, res) => {
-    console.log(req.body);
-    res.send('ok');
-});
+app.post('/api/signup', registerValidator, register);
 
 // Page 404
 app.use((req, res) => {
