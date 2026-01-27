@@ -7,10 +7,13 @@ import { connectToDB } from './db.js';
 import cors from 'cors';
 // //import validators
 import { registerValidator } from './validators/register.validator.js';
+import { loginValidator } from './validators/login.validator.js';
 //import controllers
 import { register } from './controller/signup.controller.js';
+import { login } from './controller/login.controller.js';
 
 import { fileURLToPath } from 'url';
+
 
 const app = express();
 const PORT = process.env.PORT || 1337;
@@ -35,6 +38,8 @@ app.get('/', (req, res) => {
 });
 
 //endpoints routes
+app.post('/api/login', loginValidator, login);
+
 app.post('/api/signup', registerValidator, register);
 
 // Page 404

@@ -1,7 +1,7 @@
 //imports validators
 import { signUpFormValidator } from '../validators/signup-form-validator.js';
 
-//imports utils
+//imports axios
 import axios from 'https://cdn.skypack.dev/axios?min';
 
 window.addEventListener('DOMContentLoaded', () => {
