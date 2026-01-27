@@ -14,13 +14,13 @@ import { login } from './controller/login.controller.js';
 
 import { fileURLToPath } from 'url';
 
-
 const app = express();
 const PORT = process.env.PORT || 1337;
 
-//middlewares cors y json
+//cors json and cookies
 app.use(cors());
 app.use(express.json());
+
 
 // __dirname route
 const __filename = fileURLToPath(import.meta.url);
