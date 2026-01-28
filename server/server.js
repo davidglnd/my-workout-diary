@@ -12,6 +12,7 @@ import { loginValidator } from './validators/login.validator.js';
 import { register } from './controller/signup.controller.js';
 import { login } from './controller/login.controller.js';
 import { profileController } from './controller/profile.controller.js';
+import { logout } from './controller/logout.controller.js';
 // import middlewares
 import { auth } from './middleware/auth.js';
 
@@ -47,6 +48,8 @@ app.get('/', (req, res) => {
 app.post('/api/login', loginValidator, login);
 
 app.post('/api/signup', registerValidator, register);
+
+app.post('/api/logout', logout);
 //private routes
 app.get('/api/profile', auth, profileController)
 // Page 404
