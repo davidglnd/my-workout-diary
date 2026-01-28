@@ -11,8 +11,13 @@ import { loginValidator } from './validators/login.validator.js';
 //import controllers
 import { register } from './controller/signup.controller.js';
 import { login } from './controller/login.controller.js';
+import { profileController } from './controller/profile.controller.js';
+// import middlewares
+import { auth } from './middleware/auth.js';
 
 import { fileURLToPath } from 'url';
+import coolkieParser from 'cookie-parser';
+
 
 const app = express();
 const PORT = process.env.PORT || 1337;
@@ -20,6 +25,7 @@ const PORT = process.env.PORT || 1337;
 //cors json and cookies
 app.use(cors());
 app.use(express.json());
+app.use(coolkieParser());
 
 
 // __dirname route
@@ -41,7 +47,8 @@ app.get('/', (req, res) => {
 app.post('/api/login', loginValidator, login);
 
 app.post('/api/signup', registerValidator, register);
-
+//private routes
+app.get('/api/profile', auth, profileController)
 // Page 404
 app.use((req, res) => {
   res.status(404).sendFile('404.html', { root: frontendPath });
