@@ -14,6 +14,10 @@ function formSubmit(event){
     const formDataObject = Object.fromEntries(formData);
     console.log(formDataObject);
     axios.post('/api/login', formDataObject)
+        .then(response =>{
+            console.log(response.data);
+            window.location.href = '/pages/profile.html';
+        })
         .catch(error =>{
             console.log("code:" + error.response.data.code);
             errorBox.textContent = error.response.data.message;
@@ -22,4 +26,5 @@ function formSubmit(event){
                 errorBox.classList.remove('active');
             }, 3000)
         });
+
 }
