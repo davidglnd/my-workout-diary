@@ -14,11 +14,12 @@ function formSubmit(event){
     const formDataObject = Object.fromEntries(formData);
     console.log(formDataObject);
     axios.post('/api/login', formDataObject)
-            .catch(error =>{
-                errorBox.textContent = error.response.data.message;
-                errorBox.classList.add('active');
-                setTimeout(() => {
-                    errorBox.classList.remove('active');
-                }, 3000)
-            });
+        .catch(error =>{
+            console.log("code:" + error.response.data.code);
+            errorBox.textContent = error.response.data.message;
+            errorBox.classList.add('active');
+            setTimeout(() => {
+                errorBox.classList.remove('active');
+            }, 3000)
+        });
 }
